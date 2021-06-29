@@ -1,0 +1,40 @@
+.carousel{
+
+    .carousel__detail{
+        position: relative;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        .carousel__item__left{
+            >p{
+                @include styleText(14px,$fw-3,$color-purple);
+                margin-top: $mg-5;
+            }
+            >h1{
+                @include styleText($fs-4,$fw-4,#000000);
+            }
+        }
+        .carousel__item__right{
+            >img {
+                width: 100%;
+            }
+        }
+    }
+    .carousel__top{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        >img{
+            width: 100%;
+        }
+    }
+    .carousel__bottom{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        >img{
+            width: 100%;
+        }
+    }
+}

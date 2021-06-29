@@ -1,0 +1,101 @@
+
+.header{
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    top: 0;
+    .header__list{      
+        .header__logo{
+            >a img{
+                width: 80%;
+            }
+            >button{
+                display: none;
+            }
+        }
+        .header__menu{
+            >a{
+                display: none;
+            }
+            .nav{
+                a{
+                    padding-right: $pd-5;
+                    text-decoration: none;
+                    position: relative;
+                    @include styleText(14px,$fw-3,#000000);
+                }
+                a:hover {
+                    color: $color-purple;
+                }
+                a:after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: -30px;
+                    height: 8px;
+                    width: 8px;
+                    border-radius: 50%;
+                    background: $color-purple;
+                    left: 17%;
+                    transform: scale(0);
+                    transition: 0.5s ease-in-out;
+                }
+                a:hover::after{
+                    transform: scale(1.5);
+                }
+                .active:after{
+                    transform: scale(1.0);
+                }
+                .active:hover::after{
+                    transform: scale(1.5);
+                }
+            }
+        }
+        .header__contact{
+            >a{
+                padding: 12px 16px;
+                background: #fff;
+                border-radius: 35px;
+                text-decoration: none;
+                margin: 6px;
+                @include styleText(14px,$fw-2,#ffffff);
+                box-shadow: 0 0 0 3em #b61984 inset;
+                transition: all 0.3s;
+            }
+            >a:hover{
+                color: #b61984;
+                box-shadow: 0 0 0 1px #b61984 inset; 
+            }
+        }
+        .header__contact__social{
+            a {
+                color: inherit;
+            }
+            a:hover {
+                color: $color-purple;
+            }
+            a i{
+                padding: 0 5px 0 5px;
+                font-size: $fs-3;
+            }
+        }
+    }
+}
+.header--sticky{
+    background-color: #ffffff;
+    box-shadow: 0px 5px 5px #b7adca;
+    .header__list{
+        .header__logo{
+            >a img{
+                display: none;
+            }
+        }
+        .header__menu{
+            .nav{
+                >a:after{
+                    bottom: -15px;
+                }
+            }
+        }
+    }
+}

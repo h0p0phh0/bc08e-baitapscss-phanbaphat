@@ -1,0 +1,36 @@
+@import "./helpers/variables";
+@import "./helpers/mixin";
+@import "./base/reset";
+@import "./layouts/header";
+@import "./layouts/carousel";
+@import "./layouts/products";
+@import "./layouts/contact";
+@import "./layouts/footer";
+@import "./responsive/578px";
+
+
+
+@media screen and (max-width: 1200px){
+    .container {
+        max-width: 1260px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 992){
+    
+}
+
+@media screen and (max-width: 768px){
+    
+} 
+
+
+
+
+
+
+
+
+
+

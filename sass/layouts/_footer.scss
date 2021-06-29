@@ -1,0 +1,89 @@
+.footer{
+    background: url(../images/footer_background.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: scroll;
+    width: 100%;
+    min-height: 500px;
+    .container{
+        padding-top: 86px;
+        .footer__title{
+            @include styleText(1.55rem,700,white);
+            margin-bottom: 30px;
+        }
+        .footer__contact{
+            span{
+                color: white;
+                font-size: 13px;
+                padding-right: 10px;
+                margin-bottom: 10px;
+            }
+            i{
+                margin-top: 20px;
+                color: white;
+                font-size: 15px;
+                padding-right: 10px;
+            }
+            .footer__contact__social {
+                a:hover i {
+                    color: #000;
+                }
+            }
+        }
+        .footer__quickLink{
+            ul li{
+                list-style: none;
+                border-bottom: 1px solid rgba(0,0,0,.1);
+                line-height: 1;
+                padding: 2px 0;
+                margin-bottom: 19px;
+            }
+            ul li a{
+                text-decoration: none;
+                color: white;
+                font-size: 14px;
+                transition: 0.3s all;
+            }
+            ul li a:hover{
+                opacity: 0.3;
+            }
+        }
+        .footer__newsletter{
+            padding-left: 30px;
+            padding-right: 30px;
+            >input{
+                width: 100%;
+                border: 1px solid rgba(255,255,255,.1);
+                border-radius: 50px;
+                margin-bottom: 10px;
+            }
+            .footer__email{
+                background-color: $color-purple;
+                color: white;
+                height: 50px;
+                font-size: 14px;
+                padding: 0 51px;
+                text-align: center;
+                transition: 0.3s all;
+            }
+            .footer__email:focus{
+                outline: none;
+                border: 1px solid #fff;   
+            }
+            .footer__submit{
+                @include styleText(13px,600,#181818);
+                height: 50px;
+                transition: 0.5s all;
+                color: $color-purple;
+                background-color: $color-purple;
+                box-shadow: 0 0 0 3em #fff inset;
+                transition: all 0.3s;
+                
+            }
+            .footer__submit:hover{
+                color: #fff;
+                box-shadow: 0 0 0 1px #fff inset;
+                
+            }
+        }
+    }
+}

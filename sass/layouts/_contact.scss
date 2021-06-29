@@ -1,0 +1,114 @@
+.contact {
+    background: #fff;
+    position: relative;
+    .contact__container {
+        padding-top: $pd-3;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact-left {
+        width: 60%;
+        margin: auto;
+        img {
+            width: 80%;
+            display: block;
+            margin: auto;
+        }
+    }
+    .contact-right {
+        z-index: 2;
+        width: 40%;
+        margin: auto;
+        .contact-form {
+            background: #fff;
+            width: 80%;
+            margin: auto;
+            border-radius: 20px;
+            padding: $pd-2 $pd-3;
+            box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+            form {
+                h1 {
+                    text-align: center;
+                    margin-bottom: $mg-4;
+                    font-weight: $fw-3;
+                }
+            }
+            div.row {
+                .form-group {
+                    position: relative;
+                    text-align: left;
+                    .form-control {
+                        font-size: $fs-1;
+                        border-radius: 20px;
+                        padding-left: $pd-9;
+                        color: #000;
+                        background-clip: none;
+                        &:focus {
+                            border: 1px solid rgba(0, 0, 0, 0.3);
+                            text-decoration: none;
+                        }
+                    }
+
+                    i {
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        text-align: center;
+                        line-height: 20px;
+                        color: $color-purple;
+                        &.fa-user,
+                        &.fa-envelope {
+                            top: 20%;
+                            left: 14%;
+                        }
+                        &.fa-graduation-cap {
+                            top: 20%;
+                            left: 7%;
+                        }
+                        &.fa-coffee {
+                            top: 11%;
+                            left: 7%;
+                        }
+                    }
+                }
+                button {
+                    background: $color-purple;
+                    color: #fff;
+                    border-radius: 60px;
+                    padding: $pd-2 $pd-5;
+                    font-size: $fs-1;
+                    margin-top: $mg-2;
+                    cursor: pointer;
+                    border: 0.125rem solid $color-purple;
+                    transition: all 0.4s ease;
+                    position: relative;
+                    overflow: hidden;
+                    backface-visibility: hidden;
+                    transform: translateZ(0);
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: #fff;
+                        border-radius: 20rem;
+                        transform: scale(0);
+                        transition-property: transform;
+                        transition: 0.4s ease-out;
+                    }
+                    &:hover {
+                        color: $color-purple;
+                    }
+                    &:hover:before {
+                        transform: scale(2);
+                    }
+                }
+            }
+        }
+    }
+}
